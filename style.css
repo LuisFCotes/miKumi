@@ -1,0 +1,600 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+}
+.menu a{
+    text-decoration: none;
+    color: #686565;
+   font-weight: bold;
+   margin: 0%;
+       padding: 10px 0;
+           font-family: 'League Spartan', sans-serif;
+}
+.menu{
+ display: flex;
+  justify-content: center; 
+  gap: 100px;     
+}
+.menu a:hover{
+    color: #F9B6C0;
+}
+.logo{
+    background-color: #F9B6C0;
+    padding: 5px;
+    background-position-x: 1336;
+}
+.bienvenida {
+  background-image: url('imagenes/bienvenida.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  font-family: 'League Spartan', sans-serif;
+  text-align: center;
+  padding-top: 120px; 
+}
+
+
+.bienvenida h2 {
+  color: #3b5724;       
+  font-weight: 750;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.bienvenida p {
+  color: #222;
+  font-size: 19px;
+  line-height: 1.5;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.productos {
+  text-align: center;
+  padding: 60px 0;
+  font-family: 'League Spartan', sans-serif;
+}
+
+.productos h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+
+.contenedor-productos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+
+.card {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  width: 230px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: contain;
+  padding: 0px;
+}
+
+.card .info {
+  background-color: #f8c6cf;
+  padding: 25px;
+  border-radius: 0 0 20px 20px;
+}
+
+.card .info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+
+.card .info .precio {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 8px;
+}
+.ver-mas {
+  text-align: center;
+  margin-top: 0px;
+  
+}
+.ver-mas a{
+text-decoration: none;
+    color: #686565;
+}
+
+.ver-mas button {
+  background-color: #cce8b5;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 40px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ver-mas button:hover {
+  background-color: #F9B6C0;
+  transform: scale(1.05);
+}
+.search-box {
+  position: absolute;
+  top: 20px;       
+  right: 20px;   
+  width: 180px;   
+}
+
+.search-box input {
+  width: 100%;
+  padding: 8px 35px 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-box .icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+#scroll-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f9b8c2; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#scroll-navbar.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  font-family: 'Spartan', sans-serif;
+}
+
+.scroll-menu a {
+  text-decoration: none;
+    color: #686565;
+  font-weight: 600;
+  transition: color 0.1s;
+}
+
+.scroll-menu a:hover {
+  color: white;
+}
+
+.busqueda {
+ position: absolute;  
+  top: 25px;          
+  right: 40px;          
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.busqueda input {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Spartan', sans-serif;
+}
+
+.busqueda button {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.busqueda button:hover {
+  background-color: #e783a6;
+  color: white;
+}
+.busqueda1 {
+ position: absolute;  
+  top: 5px;           
+  right: 40px;          
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.busqueda1 input {
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Spartan', sans-serif;
+}
+
+.busqueda1 button {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.busqueda1 button:hover {
+  background-color: #e783a6;
+  color: white;
+}
+
+
+.promo {
+  position: relative;
+  width: 100%;
+  height: 140vh;
+  overflow: hidden;
+}
+
+.promo img {
+  position: absolute;
+  top: 50%;
+  left: 54%;
+  transform: translate(-50%, -50%) scale(0.9);  
+  max-width: 120%;
+  height: auto;
+  border-radius: 20px;
+  animation: aparecer 1.5s ease-in-out forwards;
+  transform-origin: center center;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);  
+  }
+}
+.botonk {
+   display: flex;
+  justify-content: flex-end; 
+  align-items: flex-start;   
+  height: 100vh;           
+  padding-right: 20px;
+}
+
+
+.imgButton {
+  border: none;           
+  background: none;       
+  padding: 0;            
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+
+.imgButton img {
+  display: block;          
+  width: 1200px;             
+  height: 800px;            
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+
+.imgButton:hover img {
+  filter: brightness(120%);
+  transform: scale(1.05);   
+}
+
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 40px;
+  box-sizing: border-box;
+  height: auto; 
+}
+
+
+.texto {
+  max-width: 40%;
+  margin-top: 120px;
+  margin-left: 180px;
+  text-align: justify;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 400;
+}
+
+.texto h2 {
+  font-family: 'Righteous', cursive;
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.texto p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+
+.stich {
+  position: relative;  
+  width: auto;
+  height: auto;       
+}
+
+.stich .miImagen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 800px;
+  height: auto;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.stich .miImagen:hover {
+  transform: scale(1.05);
+  filter: brightness(110%);
+}
+
+
+.final {
+  width: 100%;
+  text-align: center;
+  margin-top: 0px; 
+}
+
+.fondoFinal {
+  display: block;
+  width: 1400px;    
+  max-width: 100%; 
+  height: auto;    
+  margin: 0 auto; 
+}
+.menu1 a{
+  
+    text-decoration: none;
+    color: #686565;
+   font-weight: bold;
+   margin: 0%;
+       padding: 10px 0;
+           font-family: 'League Spartan', sans-serif;
+}
+.menu1{
+  
+ display: flex;
+  justify-content: center; 
+  gap: 100px;     
+}
+.menu1 a:hover{
+    color: #F9B6C0;
+}
+.logo1{
+    background-color: #F9B6C0;
+    padding: 5px;
+    background-position-x: 1336;
+}
+.menuproducto{
+  margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.producto{
+  margin: 4%;
+}
+#scroll-navbar1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f9b8c2; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 0;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#scroll-navbar1.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-menu1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px 0; 
+  font-family: 'Spartan', sans-serif;
+}
+
+.scroll-menu1 a {
+  text-decoration: none;
+    color: #ffffff;
+  font-weight: 600;
+  transition: color 0.1s;
+  
+}
+.botonlogo{
+  background-color: #F9B6C0;
+  border-color: #F9B6C0;
+   border-style: dashed;
+
+}
+.btn-whatsapp {
+  position: fixed;        
+  bottom: 50px;          
+  right: 20px;            
+  z-index: 1000;         
+  transition: transform 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.3); 
+}
+.card .info {
+  background-color: #f9c8d0;
+  padding: 15px;             
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+}
+
+.card .info h3 {
+  margin-bottom: 6px;        
+  font-size: 18px;
+}
+
+.card .info p {
+  margin-bottom: 8px;       
+  color: #444;
+  font-size: 14px;
+}
+
+.card .info h4 {
+  margin-top: 5px;         
+  font-weight: bold;
+}
+.modal-contenido {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: #fff;
+  color: #333;
+  padding: 40px;
+  border-radius: 40px; 
+  width: 70%;
+  max-width: 750px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+  opacity: 0;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  max-height: 80vh;
+  display: none;
+  font-family: 'Spartan', sans-serif; 
+}
+
+.modal-contenido.activo {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.cerrar {
+  position: absolute;
+  top: 18px;
+  right: 25px;
+  font-size: 26px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #f48ca0;
+  transition: 0.2s;
+}
+
+.cerrar:hover {
+  color: #e66b89;
+}
+
+#fondo-difuminado {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 192, 203, 0.2); 
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  display: none;
+}
+
+
+.modal-contenido h2 {
+  color: #f48ca0;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modal-contenido h3 {
+  color: #f48ca0;
+  font-size: 17px;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.modal-contenido p {
+  color: #444;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: justify;
+}
+.modal-contenido.activo {
+  animation: zoomIn 0.3s ease forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+.modal-contenido::-webkit-scrollbar {
+  width: 0px;
+}
+
+.modal-contenido {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
